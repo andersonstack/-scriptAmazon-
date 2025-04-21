@@ -1,4 +1,4 @@
-import "./reset.css";
+import "./css/reset.css";
 
 document.querySelector("#app").innerHTML = `
   <div>
