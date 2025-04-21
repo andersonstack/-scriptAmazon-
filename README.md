@@ -1,16 +1,27 @@
 # Amazon Scraper (JavaScript)
 
-This project is a simple Amazon web scraper built with JavaScript, using Express, Axios, and JSDOM. It allows you to search for products on Amazon and extract information directly from the HTML.
+A lightweight web scraper that extracts product listings from Amazon search results, built with:
+- **Backend**: Bun + Express
+- **Frontend**: Vite + Vanilla JavaScript
+- **Scraping**: Axios + JSDOM
 
 ## 📦 Install dependencies
 
 ```bash
+# backend
 bun install
+
+# raiz
+npm install
 ```
 
-## 🚀 Run the server
+## 🚀 Run the project
 ```bash
+# backend
 bun run javascript/src server.js
+
+# frontend
+npm run --workspace frontend dev
 ```
 
 ## 📡 How to use
@@ -21,6 +32,7 @@ bun run javascript/src server.js
 * Express
 * Axios
 * JSDOM
+* Vite
 
 
 ### ⚠️ This project is for educational purposes only. Scraping Amazon may violate their terms of service.
