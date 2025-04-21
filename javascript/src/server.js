@@ -1,6 +1,6 @@
 import express from "express";
-import { JSDOM } from "jsdom";
 import fetchAmazonPage from "./utils/fetchAmazonPage.js";
+import paserHTML from "./utils/parseJson.js";
 
 const app = express();
 const PORT = 3000;
@@ -11,10 +11,9 @@ app.get("/api/scrape", async (req, res) => {
 
     // Product link on Amazon store and Request URL
     const html = await fetchAmazonPage(keyword);
+    const document = paserHTML(html);
 
-    // Creating the DOM
-    const dom = new JSDOM(html);
-    console.log(dom);
+    res.json({ document });
   } catch (e) {
     console.error(e);
   }
