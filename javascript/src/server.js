@@ -1,6 +1,6 @@
 import express from "express";
 import { JSDOM } from "jsdom";
-import axios from "axios";
+import fetchAmazonPage from "./utils/fetchAmazonPage.js";
 
 const app = express();
 const PORT = 3000;
@@ -10,18 +10,10 @@ app.get("/api/scrape", async (req, res) => {
     const keyword = req.query.keyword;
 
     // Product link on Amazon store and Request URL
-    const amazonUrl = `https://www.amazon.com/s?k=${encodeURIComponent(
-      keyword
-    )}`;
-
-    const { data } = await axios.get(amazonUrl, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...",
-      },
-    });
+    const html = await fetchAmazonPage(keyword);
 
     // Creating the DOM
-    const dom = new JSDOM(data);
+    const dom = new JSDOM(html);
     console.log(dom);
   } catch (e) {
     console.error(e);
