@@ -1,6 +1,6 @@
 import express from "express";
 import fetchAmazonPage from "./utils/fetchAmazonPage.js";
-import paserHTML from "./utils/parseJson.js";
+import parseHTMLToJson from "./utils/parseHTMLToJson.js";
 
 const app = express();
 const PORT = 3000;
@@ -11,7 +11,8 @@ app.get("/api/scrape", async (req, res) => {
 
     // Product link on Amazon store and Request URL
     const html = await fetchAmazonPage(keyword);
-    const document = paserHTML(html);
+    // To parse the HTML to JSON
+    const document = parseHTMLToJson(html);
 
     res.json({ document });
   } catch (e) {
