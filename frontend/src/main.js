@@ -1,8 +1,9 @@
 import "./css/reset.css";
+import "./css/styles.css";
 import getApi from "./service/getApi";
 
 document.querySelector("#app").innerHTML = `
-  <div class="container>
+  <div class="container">
     <h1 class="title">Amazon Scraper</h1>
 
     <div class="search">
