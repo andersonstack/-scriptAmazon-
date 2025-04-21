@@ -22,7 +22,7 @@ app.get("/api/scrape", async (req, res) => {
 
     // Creating the DOM
     const dom = new JSDOM(data);
-    const document = dom.window.document;
+    console.log(dom);
   } catch (e) {
     console.error(e);
   }
