@@ -8,9 +8,17 @@ import {
   serverError,
   badGateway,
 } from "./utils/httpErros.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
+
+app.use(
+  cors({
+    origin: "*",
+    methods: "GET",
+  })
+);
 
 app.get("/api/scrape", async (req, res) => {
   try {
