@@ -14,7 +14,7 @@ bun run javascript/src server.js
 ```
 
 ## 📡 How to use
-> http://localhost:3000/api/scrape?keyword=your-search-term
+> http://localhost:3000/api/scrape?k=your-search-term
 
 ## ⚙️ Technologies
 * Bun
