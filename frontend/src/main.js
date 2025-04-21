@@ -1,6 +1,6 @@
 import "./css/reset.css";
 import "./css/styles.css";
-import getApi from "./service/getApi";
+import button from "./js/button.js";
 
 document.querySelector("#app").innerHTML = `
   <div class="container">
@@ -28,4 +28,4 @@ document.querySelector("#app").innerHTML = `
   </div>
 `;
 
-getApi();
+document.querySelector(".search__button").addEventListener("click", button);
