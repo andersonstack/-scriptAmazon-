@@ -18,3 +18,8 @@ document.querySelector("#app").innerHTML = `
 `;
 
 document.querySelector(".search__button").addEventListener("click", button);
+document.querySelector(".search__input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    button();
+  }
+});
