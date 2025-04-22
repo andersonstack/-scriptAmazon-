@@ -12,18 +12,7 @@ document.querySelector("#app").innerHTML = `
       <button type="submit" class="search__button">Search</button>
     </div>
 
-    <ul class="products">
-
-      <li class="products__item">
-        <h2 class="products__title">SAMSUNG Galaxy A16 5G A Series Cell Phone, Unlocked Android Smartphone, Large AMOLED Display, Durable Design, Super Fast Charging, Expandable Storage, US Version, 2025, Blue Black</h2>
-        <img />
-        <span class="products__rating">
-          4.2 out of 5 stars, rating details
-        </span>
-        <p class="products__reviews">1,000 customer reviews</p>
-      </li>
-
-    </ul>
+    <ul class="products"></ul>
 
   </div>
 `;
