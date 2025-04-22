@@ -4,6 +4,7 @@ const productsHTML = (products) => {
   container.innerHTML = "";
 
   products.forEach((product) => {
+    if(product.title === "No title") return;
     const productElement = document.createElement("li");
     productElement.classList.add("products__item");
 
