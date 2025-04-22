@@ -3,7 +3,7 @@ import showError from "../js/error";
 
 const getApi = async (keyword) => {
   if (!keyword) {
-    showError();
+    showError("No keyword provided to search");
     return;
   }
 
