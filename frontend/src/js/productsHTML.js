@@ -1,5 +1,7 @@
 const productsHTML = (products) => {
   const container = document.querySelector(".products");
+  const button = document.querySelector(".search__button");
+  button.innerHTML = "Search";
 
   container.innerHTML = "";
 
