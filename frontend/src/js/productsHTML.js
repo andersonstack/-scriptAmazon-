@@ -4,12 +4,15 @@ const productsHTML = (products) => {
   container.innerHTML = "";
 
   products.forEach((product) => {
-    if(product.title === "No title") return;
+    if (product.title === "No title") return;
+
     const productElement = document.createElement("li");
     productElement.classList.add("products__item");
 
     const rating =
-      product.rating !== "No rating" ? product.rating : "Sem avaliação";
+      product.rating !== "No rating"
+        ? product.rating.split(",")[0]
+        : "Sem avaliação";
     const reviews =
       product.reviews !== "No reviews"
         ? `${product.reviews} avaliações`
