@@ -110,6 +110,12 @@ body {
   font-size: 0.9rem;
 }
 
+.produts__error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff0000;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .search {
